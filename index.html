@@ -13,29 +13,34 @@
             justify-content: center;
             text-align: center;
             min-height: 100vh;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             margin: 0;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d3436 100%);
             padding: 20px;
+            color: #ffffff;
         }
 
         h1 {
             margin-bottom: 20px;
-            color: #2c3e50;
-            font-size: 2.5em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            color: #ffffff;
+            font-size: 3.2em;
+            font-weight: 800;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            letter-spacing: -0.5px;
         }
 
         .container {
-            background: white;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
             max-width: 800px;
             width: 90%;
             display: flex;
             flex-direction: column;
             align-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .logo {
@@ -61,70 +66,71 @@
         model-viewer { 
             width: 100%; 
             height: 500px; 
-            background-color: #f5f5f5;
-            border-radius: 10px;
+            background: #ffffff;
+            border-radius: 20px;
             margin: 20px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            backdrop-filter: blur(5px);
         } 
 
         #ar-button {
-            background-color: #4CAF50;
+            background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
             color: white;
-            padding: 12px 24px;
+            padding: 15px 30px;
             border: none;
-            border-radius: 25px;
+            border-radius: 12px;
             cursor: pointer;
             font-size: 1.1em;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
             display: flex;
             align-items: center;
             gap: 8px;
         }
 
-        #ar-button::before {
-            content: '🔍';
-            font-size: 1.2em;
-        }
-
         #ar-button:hover {
-            background-color: #45a049;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.3);
         }
 
         .progress-bar {
             width: 100%;
-            height: 4px;
-            background: #f0f0f0;
-            border-radius: 2px;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+            overflow: hidden;
         }
 
         .update-bar {
-            background: #4CAF50;
+            background: linear-gradient(90deg, #00b4db 0%, #0083b0 100%);
             height: 100%;
-            border-radius: 2px;
+            border-radius: 3px;
             transition: width 0.3s ease;
         }
 
         .description {
             margin: 20px 0;
-            color: #666;
-            line-height: 1.6;
+            color: #ffffff;
+            line-height: 1.8;
+            font-size: 1.2em;
+            font-weight: 400;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.2);
         }
     </style> 
 </head>
 <body>
     <div class="container">
         <img src="Tole-logo-sin-fondo.png" alt="ToleTolers Logo" class="logo">
-        <h1>ToleTolers Verano 2025</h1>
+        <h1>Mapa Virtual del Evento</h1>
         
         <div class="description">
-            Explora nuestro modelo 3D en <strong>realidad aumentada</strong>. 
-            ¡Coloca el Charmander en <strong>tu espacio real</strong>!
+            Explora nuestro mapa 3D simplificado en <strong>realidad aumentada</strong>. 
             <p><small>*Para ver en AR necesitas un dispositivo móvil compatible con realidad aumentada.</small></p>
         </div>
         
         <model-viewer 
-            src="Charmander.glb" 
+            src="MapaFiscal3DV2.glb" 
             ar 
             ar-modes="webxr scene-viewer quick-look" 
             camera-controls 
@@ -133,7 +139,8 @@
             shadow-intensity="1" 
             exposure="1"
             auto-rotate
-            rotation-per-second="30deg"
+            rotation-per-second="10deg"
+            orientation="0deg 0deg 270deg"
             autoplay>
             
             <div class="progress-bar hide" slot="progress-bar">
