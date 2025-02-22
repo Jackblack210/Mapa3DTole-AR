@@ -117,12 +117,68 @@
             font-weight: 400;
             text-shadow: 0 1px 4px rgba(0,0,0,0.2);
         }
+
+        .programa {
+            width: 100%;
+            margin-top: 40px;
+            text-align: left;
+            color: white;
+        }
+
+        .programa h2 {
+            color: #00b4db;
+            font-size: 2em;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .programa h3 {
+            color: #ffffff;
+            font-size: 1.5em;
+            margin-top: 25px;
+            background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .programa h3.sabado {
+            background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
+            border-left: 4px solid #006d91;
+        }
+
+        .programa h3.domingo {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5253 100%);
+            border-left: 4px solid #d63031;
+        }
+
+        .evento {
+            margin: 15px 0;
+            padding: 10px;
+            border-left: 3px solid #00b4db;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 0 10px 10px 0;
+        }
+
+        .evento.sabado {
+            border-left: 3px solid #00b4db;
+        }
+
+        .evento.domingo {
+            border-left: 3px solid #ff6b6b;
+        }
+
+        .hora.sabado, .hora.domingo {
+            color: #00b4db;
+            font-weight: bold;
+            margin-right: 10px;
+        }
     </style> 
 </head>
 <body>
     <div class="container">
         <img src="Tole-logo-sin-fondo.png" alt="ToleTolers Logo" class="logo">
-        <h1>Mapa Virtual del Evento</h1>
+        <h1>Mapa Virtual y Programa del Evento</h1>
         
         <div class="description">
             Explora nuestro mapa 3D simplificado en <strong>realidad aumentada</strong>. 
@@ -141,7 +197,7 @@
             auto-rotate
             rotation-per-second="10deg"
             orientation="0deg 0deg 270deg"
-            scale="0.002 0.002 0.002"
+            scale="0.3 0.3 0.3"
             autoplay>
             
             <div class="progress-bar hide" slot="progress-bar">
@@ -152,6 +208,54 @@
                 Ver en Realidad Aumentada
             </button>
         </model-viewer>
+
+        <div class="programa">
+            <h2>Programa del Evento</h2>
+            
+            <!-- SÁBADO -->
+            <h3 class="sabado">Escenario Principal - Sábado</h3>
+            <div class="evento sabado"><span class="hora sabado">12:30</span> Matias Francino</div>
+            <div class="evento sabado"><span class="hora sabado">13:00</span> Homeron</div>
+            <div class="evento sabado"><span class="hora sabado">13:30</span> Freestyle</div>
+            <div class="evento sabado"><span class="hora sabado">14:30</span> Blank boy</div>
+            <div class="evento sabado"><span class="hora sabado">15:00</span> Las pruebas picantes de Don Toli</div>
+            <div class="evento sabado"><span class="hora sabado">16:00</span> Competencia cosplay</div>
+            <div class="evento sabado"><span class="hora sabado">17:30</span> Siniestro</div>
+            <div class="evento sabado"><span class="hora sabado">18:30</span> Blackened tributo a Metallica</div>
+
+            <h3 class="sabado">Charla Biblioteca y Actividades - Sábado</h3>
+            <div class="evento sabado"><span class="hora sabado">15:00</span> Grief Project</div>
+            <div class="evento sabado"><span class="hora sabado">16:00</span> Maratón de cuentacuentos con PaTo Toro</div>
+
+            <h3 class="sabado">Horarios Video Juegos - Sábado</h3>
+            <div class="evento sabado"><span class="hora sabado">14:00</span> Marvel vs Capcom 2</div>
+            <div class="evento sabado"><span class="hora sabado">14:00</span> Mortal Kombat XL</div>
+            <div class="evento sabado"><span class="hora sabado">15:00</span> Mario Kart 8</div>
+
+            <!-- DOMINGO -->
+            <h3 class="domingo">Escenario Principal - Domingo</h3>
+            <div class="evento domingo"><span class="hora domingo">13:00</span> Carrera de pulpos</div>
+            <div class="evento domingo"><span class="hora domingo">13:30</span> DJ Dark King</div>
+            <div class="evento domingo"><span class="hora domingo">14:00</span> Dance covers</div>
+            <div class="evento domingo"><span class="hora domingo">14:30</span> Shut up dance</div>
+            <div class="evento domingo"><span class="hora domingo">15:00</span> Random Dance (Coral Fest)</div>
+            <div class="evento domingo"><span class="hora domingo">15:30</span> Dance covers</div>
+            <div class="evento domingo"><span class="hora domingo">16:00</span> Dynasty</div>
+            <div class="evento domingo"><span class="hora domingo">16:30</span> Si se lo sabe baile (Coral Fest)</div>
+            <div class="evento domingo"><span class="hora domingo">17:00</span> DJ Neylan</div>
+            <div class="evento domingo"><span class="hora domingo">17:45</span> DJ Ullbrixx</div>
+            <div class="evento domingo"><span class="hora domingo">18:30</span> DJ Nikrauxx</div>
+            <div class="evento domingo"><span class="hora domingo">19:00</span> DJ Luthack</div>
+
+            <h3 class="domingo">Charla Biblioteca y Actividades - Domingo</h3>
+            <div class="evento domingo"><span class="hora domingo">16:00</span> Charla Jaime Gianelloni anime y astronomía</div>
+            <div class="evento domingo"><span class="hora domingo">17:00</span> Ignacio Paz</div>
+
+            <h3 class="domingo">Horarios Video Juegos - Domingo</h3>
+            <div class="evento domingo"><span class="hora domingo">14:00</span> Tekken 8</div>
+            <div class="evento domingo"><span class="hora domingo">14:00</span> SF 6</div>
+            <div class="evento domingo"><span class="hora domingo">15:00</span> Smash Ultimate</div>
+        </div>
     </div>
 </body>
 </html>
