@@ -225,6 +225,47 @@
             font-weight: bold;
             margin-right: 10px;
         }
+
+        /* Tablets en modo horizontal */
+        @media only screen 
+        and (min-device-width: 768px) 
+        and (max-device-width: 1024px) 
+        and (orientation: landscape) {
+            .container {
+                width: 95%;
+                padding: 20px;
+            }
+
+            model-viewer {
+                height: 2000px !important;  /* Forzamos la altura con !important */
+                margin: 50px 0;
+            }
+
+            .programa {
+                width: 100%;
+                padding: 0 10px;
+            }
+        }
+
+        /* Tablets en modo vertical */
+        @media only screen 
+        and (min-device-width: 768px) 
+        and (max-device-width: 1024px) 
+        and (orientation: portrait) {
+            .container {
+                width: 95%;
+                padding: 20px;
+            }
+
+            model-viewer {
+                height: 600px;
+            }
+
+            .programa {
+                width: 100%;
+                padding: 0 10px;
+            }
+        }
     </style> 
 </head>
 <body>
