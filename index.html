@@ -35,7 +35,7 @@
             padding: 30px;
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-            max-width: 800px;
+            max-width: 100%;
             width: 90%;
             display: flex;
             flex-direction: column;
@@ -60,6 +60,26 @@
         @media screen and (max-width: 480px) {
             .logo {
                 width: 80%;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            .container {
+                width: 95%;
+                padding: 20px;
+            }
+
+            model-viewer {
+                height: 600px;
+            }
+
+            .programa {
+                width: 100%;
+                padding: 0 10px;
+            }
+
+            h1 {
+                font-size: 2.8em;
             }
         }
 
@@ -152,6 +172,16 @@
             border-left: 4px solid #d63031;
         }
 
+        .programa h3.sabado {
+            background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
+            border-left: 4px solid #006d91;
+        }
+
+        .programa h3.domingo {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5253 100%);
+            border-left: 4px solid #d63031;
+        }
+
         .evento {
             margin: 15px 0;
             padding: 10px;
@@ -205,7 +235,7 @@
             </div>
 
             <button slot="ar-button" id="ar-button">
-               👀 Ver en Realidad Aumentada
+                👀 Ver en Realidad Aumentada
             </button>
         </model-viewer>
 
