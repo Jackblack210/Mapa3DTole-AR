@@ -70,7 +70,8 @@
             }
 
             model-viewer {
-                height: 800px;
+                height: 1200px;
+                margin: 50px 0;
             }
 
             .programa {
@@ -104,11 +105,37 @@
             height: 500px; 
             background: #ffffff;
             border-radius: 20px;
-            margin: 20px 0;
+            margin: 10px 0 40px 0;
             border: 1px solid rgba(255, 255, 255, 0.2);
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
             backdrop-filter: blur(5px);
         } 
+
+        .modelo-titulo {
+            color: #ffffff;
+            font-size: 1.5em;
+            margin-top: 25px;
+            background: linear-gradient(135deg, #9D50BB 0%, #6E48AA 100%);
+            padding: 10px 20px;
+            border-radius: 10px;
+            border-left: 4px solid #4A3082;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+            .modelo-titulo {
+                font-size: 1.8em;
+                margin: 30px 0;
+            }
+
+            model-viewer {
+                height: 1200px;
+                margin: 50px 0;
+            }
+        }
 
         #ar-button {
             background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
@@ -231,6 +258,7 @@
             <p><small>*Para ver en AR necesitas un dispositivo móvil compatible con realidad aumentada.</small></p>
         </div>
         
+        <h2 class="modelo-titulo">Manipula este modelo 3D con los dedos 😊</h2>
         <model-viewer 
             src="MapaFiscal3DV5.glb" 
             ar 
